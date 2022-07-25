@@ -1,0 +1,72 @@
+h1{
+    color:cornflowerblue;
+    background-color: cornsilk;
+    margin: 2em 1em;
+    padding: 10px;
+    border: dotted 2px darkgreen
+}
+
+main{
+    background-color:lightgray;
+}
+
+.external-link::after{
+    content: '(***)';
+    color:crimson;
+}
+
+.external-link::before{
+    content: '(->->->)';
+    color:indianred;
+}
+
+.background-image{
+    background-image: url(style.jpg);
+    height: 50rem;
+    width: 100rem;
+    color: aliceblue;
+    background-repeat: no-repeat;
+    background-position: 50px center;
+}
+
+.header-image{
+    background: url(tree.jpg) center / cover;
+    height: 15rem;
+    border: 3px solid black;
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+.gradient{
+    background-image: linear-gradient(to right, green, orange);
+    width: 100rem;
+    height: 20rem;
+}
+
+.gradient{
+    background-image: linear-gradient(
+        to right,
+        purple 0%,
+        green 25%,
+        lightblue 75,
+        orange 100%);
+    width: 100rem;
+    height: 20rem;
+}
+
+.gradient{
+    background-image: linear-gradient(circle, green, orange);
+    width: 100rem;
+    height: 20rem;
+}
+
+.gradient-image{
+    background-image: radial-gradient(ellipse at top left,
+    white 25%,
+    transparent),
+    url(mountains.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+}

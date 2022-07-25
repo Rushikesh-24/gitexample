@@ -1,0 +1,86 @@
+<head>
+    <style>
+        .nav-Wrapper{
+            display: flex;
+        }
+        .nav-link:last-child{
+            margin-left: auto;
+        }
+
+        .nav-link:nth-child(even){
+            font-size: 20px;
+            color: coral;
+        }
+
+        .nav-link:nth-child(5){
+            font-size: 20px;
+            color: crimson;
+        }
+
+        span{
+            height: 2rem;
+            width: 2rem;
+            background-color: cadetblue;
+            display: inline-block;
+        }
+
+        span:nth-child(2n+3){
+            background-color: yellowgreen;
+            border-radius: 50%;
+        }
+
+        .parent > .child {
+            width: 20px;
+            height: 20px;
+            background-color: cornflowerblue;
+            color:brown;
+        }
+
+        .one + .item{
+            outline: 3px dashed coral;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-Wrapper">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/about" class="nav-link">About Us</a>
+        <a href="/films" class="nav-link">Films</a>
+        <a href="/forum" class="nav-link">Forum</a>
+        <a href="/contact-us" class="nav-link nav-LinkLast">Contact-Us</a>
+    </nav>
+
+    <br><br><br>
+
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <br><br>
+
+    <div class="parent">
+        <div class="child">Hi
+            <div class="grandchild">Hello</div>
+        </div>
+    </div>
+
+    <br><br>
+    
+    <div>
+        <div class = "item one">One</div>
+        <div class = "item">Two</div>
+        <div class = "item">Three</div>
+        <div class = "item">Four</div>
+        <div class = "item">Five</div>
+        <div class = "item">Six</div>
+    </div>
+</body>

@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="form1.css" />
+    </head>
+    <body>
+<form id="redemption" method="post">
+    <div>
+        <h1>Oscar Redemption</h1>
+         <h2> Here's is your chance to set the record straight:tell us what year the wrong film got nominated, and which film 
+                should have received a nod...</h2>
+    </div>
+ 
+    <fieldset>
+        <legend>About the offending film (part 1 of 3)</legend>
+        <div>
+            <label for="film">The film in question?</label>
+            <input id="film"  name="film" type="text" placeholder="e.g King Kong " autofocus required/>
+        </div>
+        <div>
+            <label for="yearOfCrime">Year of Crime</label>
+            <input id="yearOfCrime"  name="yearOfCrime" type="number" min="2000" max="2020" autofocus />
+        </div>
+        <div>
+            <label for="awardWon"> Award Won</label>
+            <input  id="awardWon" name="awardWon" type="text" list="awards"/>
+            <datalist id="awards" >
+            <select>
+                <option value="Best Picture"></option>
+                <option value="Best Director"></option>
+                <option value="Best Adapted screenplay"></option>
+                <option value="Best Original Screenplay"></option>
+            </select>
+            </datalist>
+        </div>
+        <div>
+            <label for="whyItsWrong"> Tell us why that's wrong ? </label>  
+            <textarea id="whyItsWrong" name="whyItsWrong" placeholder="I fell asleep within  10 minutes..."></textarea>
+        </div>
+        <div>
+            <label for="howYouRateIt"> How you rate it ( 1 is woeful , 10 is awesome)</label>   
+            <input id="howYouRateIt"  name="howYouRateIt" type="range" min="" max="10"  value="6" 
+            onchange="showValue(this.value)"/> <span id="range"></span>
+        </div>
+        <script>
+            function showValue(newValue)
+            {
+                document.getElementById("range").innerHTML =newValue;
+            }
+        </script>
+    </fieldset>
+    <fieldset>
+        <legend>What should have won (part 2 of 3)</legend>
+        <div>
+            <label for="filmGood">The film that should have won?</label>
+            <input id="filmGood"  name="filmGood" type="text" placeholder="e.g Speed " required/>
+        </div>
+ 
+        <div>
+            <label for="whyItShould">Tell us why it should have won?</label>
+            <textarea id="whyItShould" name="whyItShould" placeholder="I enjoyed ....watching it "></textarea>
+
+        </div>
+        <div>
+            <label for="howYouRateThis"> How you rate it ( 1 is woeful , 10 is awesome)</label>   
+            <input id="howYouRateIhis"  name="howYouRateTHis" type="number" min="1" max="10" value="5"  
+            required/>
+
+        </div>
+    </fieldset>
+ 
+    <fieldset>
+        <legend>About You (part 3 of 3)</legend>
+        <div>
+            <label for="name"> Your Name</label>
+            <input id="name" name="name" pattern="^[A-Za-z]\\w{5, 29}$" 
+            placeholder="Roy Fielding" required/>
+ 
+        </div>
+        <div>
+            <label for="date"> Date/Time</label>
+            <input id="date" name="date"  class="pickDate"  type="time"/>
+ 
+            <label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday">
+
+        </div>
+ 
+        <div>
+            <label for="tel">Your phone number</label>
+            <input  id="tel" name="tel" type="tel" autocomplete="off"/>
+        </div>
+ 
+
+        <div>
+            <label for="email">Your Email address</label>
+            <input  id="email" name="email" type="email" autocomplete="off"/>
+        </div>
+ 
+        <div>
+            <label for="web">Your Web address</label>
+            <input  id="web" name="web" type="url" placeholder="http://mysite.com"/>
+        </div>
+        <div>
+            <label for="color">Your favorite </label>
+            <input id="color" name="color" type="color" />
+        </div>
+ 
+        </fieldset>
+        <fieldset>
+            <input name="searchmovie" type="search"/>
+        </fieldset>
+ 
+        <div>
+            <input type="number" min="2"  max="20" step="2" />
+        </div>
+ 
+        <input type ="submit" id="submit" value="Submit Redemption" />
+ 
+</form>
+    </body>
+ 
+</html>

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+            img[alt = "A Tree"]{
+                outline: 3px dashed tomato;
+            }
+
+            [data-ingredients*= honey]{
+                color: cornflowerblue;
+            }
+
+            [data-ingredients$= cherry]{
+                color:green;
+            }
+
+            [data-activity-name = "swimming"][data-location = "indoor"]{
+                color: mediumaquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <img  src="tree.jpg" alt="A Tree"/>
+        <br><br>
+        <img  src="mountains.jpg" alt="Mountains" />
+
+        <p data-ingredients="sugar  maplesyrup honey"> A tasty receipe 1 </p>
+        <p data-ingredients="apple banana honey"> A tasty receipe 2 </p>
+        <p data-ingredients="apple banana cherry"> A tasty receipe 3 </p>
+
+        <ul>
+            <li data-type ="personal-todo"> Go to market</li>
+            <li data-type ="office-todo">  Read Books</li>
+            <li data-type="office-todo"> Set Question paper</li>
+        </ul>
+
+        <div>
+            <li data-todo-type="exercise"
+            data-activity-name="running"
+            data-location="indoor"
+            >
+                Running
+            </li>
+            <li data-todo-type="exercise"
+            data-activity-name="swimming"
+            data-location="indoor"
+            >
+                Swimming
+            </li>
+            <li data-todo-type="exercise"
+            data-activity-name="cycling"
+            data-location="outdoor"
+            >
+                Cycling
+            </li>
+            <li data-todo-type="exercise"
+            data-activity-name="swimming"
+            data-location="outdoor"
+            >
+                Swimming
+            </li>
+        </div>
+    </body>
+</html>

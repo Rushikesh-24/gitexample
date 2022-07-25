@@ -1,0 +1,34 @@
+.flipper{
+    perspective: 400px;
+    position: relative;
+}
+
+.flipper-object{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.panel{
+    top: 0;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flipper-vertical .back{
+    transform: rotateX(180deg);
+}
+
+.flipper-horizontal .back{
+    transform: rotateY(180deg);
+}
+
+.flipper:hover .flipper-vertical{
+    transform: rotateX(180deg);
+}
+
+.flipper:hover .flipper-horizontal{
+    transform: rotateY(180deg);
+}
